@@ -108,13 +108,89 @@
 // }
 // console.log(leetspeak('I am a leet programming haxor'));
 
-function longLongVowels(input) {
-  let vowelString = input
-    .replace(/aa/gi, 'aaaaa')
-    .replace(/ee/gi, 'eeeee')
-    .replace(/oo/gi, 'ooooo')
-    .replace(/ii/gi, 'iiiii')
-    .replace(/uu/gi, 'uuuuu');
-  return vowelString;
+////9.
+// function longLongVowels(input) {
+//   let vowelString = input
+//     .replace(/aa/gi, 'aaaaa')
+//     .replace(/ee/gi, 'eeeee')
+//     .replace(/oo/gi, 'ooooo')
+//     .replace(/ii/gi, 'iiiii')
+//     .replace(/uu/gi, 'uuuuu');
+//   return vowelString;
+// }
+// console.log(longLongVowels('good'));
+
+////10.
+
+// function positiveNumbers(array) {
+//   newArray = array.sort();
+//   while (true) {
+//     if (newArray[0] < 0) {
+//       newArray.shift();
+//     } else {
+//       break;
+//     }
+//   }
+//   console.log(newArray);
+//   return newArray;
+// }
+
+// positiveNumbers([-4, 4, 6, -3, 1, -9]);
+
+////////11.
+function caeserCipher(message, shift) {
+  message = message.toLowerCase();
+  var array = message.split(' ');
+  var newArray = [];
+  var alphabet = 'abcdefghijklmnopqrstuvwxyz';
+
+  if (shift > 25) {
+    shift = shift % 26;
+  }
+
+  for (var i = 0; i < array.length; i++) {
+    var word = [];
+    for (var j = 0; j < array[i].length; j++) {
+      var index = alphabet.indexOf(array[i][j]);
+      if (shift + index > 25) {
+        var letter = alphabet[index + shift - 26];
+      } else {
+        var letter = alphabet[index + shift];
+      }
+      word.push(letter);
+    }
+    newArray.push(word.join(''));
+  }
+  return newArray.join(' ');
 }
-console.log(longLongVowels('good'));
+
+console.log(caeserCipher('Is this thing working', 13));
+
+/////12.
+function caeserDecipher(message, shift) {
+  message = message.toLowerCase();
+  var array = message.split(' ');
+  var newArray = [];
+  var alphabet = 'abcdefghijklmnopqrstuvwxyz';
+
+  if (shift > 25) {
+    shift = shift % 26;
+  }
+
+  for (var i = 0; i < array.length; i++) {
+    var word = [];
+    for (var j = 0; j < array[i].length; j++) {
+      var index = alphabet.indexOf(array[i][j]);
+      if (shift > index) {
+        var letter = alphabet[index - shift + 26];
+      } else {
+        var letter = alphabet[index - shift];
+      }
+      word.push(letter);
+    }
+    newArray.push(word.join(''));
+  }
+  return newArray.join(' ');
+}
+
+console.log(caeserDecipher('vf guvf guvat jbexvat', 13));
