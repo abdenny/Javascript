@@ -1,50 +1,44 @@
-//Tuesday, Feb 4th.
-//1. Madlib
+// Tuesday, Feb 4th.
+// 1. Madlib
 // function madlib(name, subject) {
-//   return console.log(name + "'s favorite subject is " + subject);
+//   return name + "'s favorite subject is " + subject;
 // }
 
-// madlib('Austin', 'Biology');
+// console.log(madlib('Austin', 'Biology'));
 
 //2. Tip calculator
 
 // function tipAmmount(billAmmount, service) {
 //   if (service == 'good') {
 //     let tipTotal = billAmmount * 0.2;
-//     console.log(tipTotal);
 //     return tipTotal;
 //   } else if (service == 'fair') {
 //     let tipTotal = billAmmount * 0.15;
-//     console.log(tipTotal);
 //     return tipTotal;
 //   } else {
 //     let tipTotal = billAmmount * 0.1;
-//     console.log(tipTotal);
 //     return tipTotal;
 //   }
 // }
-// tipAmmount(100, 'good');
+// console.log(tipAmmount(100, 'good'));
 
 // //3.
-// function totalAmmount(billAmmount, service) {
-//   if (service == 'good') {
-//     let tipTotal = billAmmount * 0.2;
-//     total = tipTotal + billAmmount;
-//     console.log(total);
-//     return total;
-//   } else if (service == 'fair') {
-//     let tipTotal = billAmmount * 0.15;
-//     total = tipTotal + billAmmount;
-//     console.log(total);
-//     return total;
-//   } else {
-//     let tipTotal = billAmmount * 0.1;
-//     total = tipTotal + billAmmount;
-//     console.log(total);
-//     return total;
-//   }
-// }
-// totalAmmount(100, 'good');
+function totalAmmount(billAmmount, service) {
+  if (service == 'good') {
+    let tipTotal = billAmmount * 0.2;
+    total = tipTotal + billAmmount;
+    return total;
+  } else if (service == 'fair') {
+    let tipTotal = billAmmount * 0.15;
+    total = tipTotal + billAmmount;
+    return total;
+  } else {
+    let tipTotal = billAmmount * 0.1;
+    total = tipTotal + billAmmount;
+    return total;
+  }
+}
+console.log(totalAmmount(100, 'good'));
 
 ////4.
 // function printNumbers(startNum, lastNum) {
