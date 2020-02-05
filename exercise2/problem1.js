@@ -42,3 +42,7 @@ row1.appendChild(col2);
 row1.appendChild(col3);
 row1.appendChild(col4);
 container.appendChild(row1);
+
+/////////////////////////Second row
+var row2 = document.createElement('div');
+var h2 = document.createElement('h2');

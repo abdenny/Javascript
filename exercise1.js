@@ -23,22 +23,22 @@
 // console.log(tipAmmount(100, 'good'));
 
 // //3.
-function totalAmmount(billAmmount, service) {
-  if (service == 'good') {
-    let tipTotal = billAmmount * 0.2;
-    total = tipTotal + billAmmount;
-    return total;
-  } else if (service == 'fair') {
-    let tipTotal = billAmmount * 0.15;
-    total = tipTotal + billAmmount;
-    return total;
-  } else {
-    let tipTotal = billAmmount * 0.1;
-    total = tipTotal + billAmmount;
-    return total;
-  }
-}
-console.log(totalAmmount(100, 'good'));
+// function totalAmmount(billAmmount, service) {
+//   if (service == 'good') {
+//     let tipTotal = billAmmount * 0.2;
+//     total = tipTotal + billAmmount;
+//     return total;
+//   } else if (service == 'fair') {
+//     let tipTotal = billAmmount * 0.15;
+//     total = tipTotal + billAmmount;
+//     return total;
+//   } else {
+//     let tipTotal = billAmmount * 0.1;
+//     total = tipTotal + billAmmount;
+//     return total;
+//   }
+// }
+// console.log(totalAmmount(100, 'good'));
 
 ////4.
 // function printNumbers(startNum, lastNum) {
@@ -161,30 +161,30 @@ function caeserCipher(message, shift) {
 console.log(caeserCipher('Is this thing working', 13));
 
 /////12.
-function caeserDecipher(message, shift) {
-  message = message.toLowerCase();
-  var array = message.split(' ');
-  var newArray = [];
-  var alphabet = 'abcdefghijklmnopqrstuvwxyz';
+// function caeserDecipher(message, shift) {
+//   message = message.toLowerCase();
+//   var array = message.split(' ');
+//   var newArray = [];
+//   var alphabet = 'abcdefghijklmnopqrstuvwxyz';
 
-  if (shift > 25) {
-    shift = shift % 26;
-  }
+//   if (shift > 25) {
+//     shift = shift % 26;
+//   }
 
-  for (var i = 0; i < array.length; i++) {
-    var word = [];
-    for (var j = 0; j < array[i].length; j++) {
-      var index = alphabet.indexOf(array[i][j]);
-      if (shift > index) {
-        var letter = alphabet[index - shift + 26];
-      } else {
-        var letter = alphabet[index - shift];
-      }
-      word.push(letter);
-    }
-    newArray.push(word.join(''));
-  }
-  return newArray.join(' ');
-}
+//   for (var i = 0; i < array.length; i++) {
+//     var word = [];
+//     for (var j = 0; j < array[i].length; j++) {
+//       var index = alphabet.indexOf(array[i][j]);
+//       if (shift > index) {
+//         var letter = alphabet[index - shift + 26];
+//       } else {
+//         var letter = alphabet[index - shift];
+//       }
+//       word.push(letter);
+//     }
+//     newArray.push(word.join(''));
+//   }
+//   return newArray.join(' ');
+// }
 
-console.log(caeserDecipher('vf guvf guvat jbexvat', 13));
+// console.log(caeserDecipher('vf guvf guvat jbexvat', 13));

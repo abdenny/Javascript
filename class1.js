@@ -33,27 +33,27 @@
 
 // var and = boolean && false
 //
-var expr = 'papayas';
+// var expr = 'papayas';
 
-if (expr == 'oranges') {
-  console.log('Oranges are .59 per pound');
-} else if (expr == 'mangos') {
-  console.log('Mangos are .80 per pound');
-} else {
-  console.log("We're out of papayas");
-}
+// if (expr == 'oranges') {
+//   console.log('Oranges are .59 per pound');
+// } else if (expr == 'mangos') {
+//   console.log('Mangos are .80 per pound');
+// } else {
+//   console.log("We're out of papayas");
+// }
 
-////// switch statement
-switch (expr) {
-  case 'oranges':
-    console.log('oranges are .59 per pound');
-    break;
-  case 'mangos':
-    console.log('mangos are .90 per pound');
-  case 'papayas':
-    console.log('were out of those');
-    break;
-}
+// ////// switch statement
+// switch (expr) {
+//   case 'oranges':
+//     console.log('oranges are .59 per pound');
+//     break;
+//   case 'mangos':
+//     console.log('mangos are .90 per pound');
+//   case 'papayas':
+//     console.log('were out of those');
+//     break;
+// }
 
 for (let count = 0; count < 10; count++) {
   console.log(count);
