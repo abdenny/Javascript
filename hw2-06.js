@@ -108,22 +108,135 @@
 // console.log(alpha(people));
 
 // 8.
-var people = [
-  'Dom',
-  'Lyn',
-  'Kirk',
-  'Autumn',
-  'Trista',
-  'Jesslyn',
-  'Kevin',
-  'John',
-  'Eli',
-  'Juan',
-  'Robert',
-  'Keyur',
-  'Jason',
-  'Che',
-  'Ben'
-];
+// let people = [
+//   'Dom',
+//   'Lyn',
+//   'Kirk',
+//   'Autumn',
+//   'Trista',
+//   'Jesslyn',
+//   'Kevin',
+//   'John',
+//   'Eli',
+//   'Juan',
+//   'Robert',
+//   'Keyur',
+//   'Jason',
+//   'Che',
+//   'Ben'
+// ];
 
-console.log(lengthSort(people));
+// function sortLength(arr) {
+//   return arr.sort(function(a, b) {
+//     return a.length - b.length;
+//   });
+// }
+
+// console.log(sortLength(people));
+
+//9.
+// function sumArr(total, num) {
+//   return total + num;
+// }
+
+// function compareArr(a, b) {
+//   var A = a.reduce(sumArr);
+//   var B = b.reduce(sumArr);
+//   return A - B;
+// }
+
+// function sortArr(arr) {
+//   return arr.sort(compareArr);
+// }
+
+// var arr = [
+//   [1, 3, 4],
+//   [3, 6],
+//   [2, 4, 6, 8]
+// ];
+// console.log(sortArr(arr));
+
+//10.
+// function helloWorld() {
+//   console.log('Hello, world!');
+// }
+
+// function call3Times(fun) {
+//   fun();
+//   fun();
+//   fun();
+// }
+
+// call3Times(helloWorld);
+
+//11.
+// function callNTimes(N, fun) {
+//   for (var i = 0; i < N; i++) {
+//     fun();
+//   }
+// }
+
+// callNTimes(9, helloWorld);
+
+//12.
+// function sum(total, num) {
+//   return total + num;
+// }
+
+// function sumAnArray(arr) {
+//   return arr.reduce(sum);
+// }
+
+// var numbers = [1, 2, 3, 4, 5];
+// console.log(sumAnArray(numbers));
+
+//13.
+// function letterToAdd (acro, word) {
+//     return acro + word[0].toUpperCase();
+// }
+
+// function acronym (words) {
+//     return words.reduce(letterToAdd, "");
+// }
+
+// var words = ['national', 'aeronautics', 'space', 'administration'];
+// console.log(acronym(words));
+
+////// Large Problems
+//1.
+// function customForEach(arr, fun) {
+//   for (var i = 0; i < arr.length; i++) {
+//     fun(arr[i]);
+//   }
+// }
+
+// var arr = [{ name: 'Bob' }, { name: 'Alice' }, { name: 'Joe' }];
+// customForEach(arr, function(person) {
+//   console.log('Hello, ' + person.name + '!');
+// });
+
+//2.
+// function customMap (arr, fun) {
+//     return fun(arr);
+// }
+
+// var values = [1, 2, 3, 4, -5];
+// console.log(customMap(values, square));
+
+//3.
+function myCipher(text) {
+  var alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+  var letters = text.split('');
+
+  var newLetters = letters.map(letter => {
+    if (alphabet.indexOf(letter.toUpperCase()) + 13 >= 26) {
+      return alphabet[alphabet.indexOf(letter.toUpperCase()) + 13 - 26];
+    } else {
+      return alphabet[alphabet.indexOf(letter.toUpperCase()) + 13];
+    }
+  });
+  var result = newLetters.join('');
+  return result;
+}
+
+console.log(myCipher('this is my cipherrrr'));
