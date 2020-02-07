@@ -191,16 +191,16 @@
 // console.log(sumAnArray(numbers));
 
 //13.
-// function letterToAdd (acro, word) {
-//     return acro + word[0].toUpperCase();
-// }
+function letterToAdd(x, word) {
+  return x + word[0].toUpperCase();
+}
 
-// function acronym (words) {
-//     return words.reduce(letterToAdd, "");
-// }
+function acronym(words) {
+  return words.reduce(letterToAdd, '');
+}
 
-// var words = ['national', 'aeronautics', 'space', 'administration'];
-// console.log(acronym(words));
+var words = ['national', 'aeronautics', 'space', 'administration'];
+console.log(acronym(words));
 
 ////// Large Problems
 //1.
@@ -224,19 +224,19 @@
 // console.log(customMap(values, square));
 
 //3.
-function myCipher(text) {
-  var alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
-  var letters = text.split('');
+// function myCipher(text) {
+//   var alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+//   var letters = text.split('');
 
-  var newLetters = letters.map(letter => {
-    if (alphabet.indexOf(letter.toUpperCase()) + 13 >= 26) {
-      return alphabet[alphabet.indexOf(letter.toUpperCase()) + 13 - 26];
-    } else {
-      return alphabet[alphabet.indexOf(letter.toUpperCase()) + 13];
-    }
-  });
-  var result = newLetters.join('');
-  return result;
-}
+//   var newLetters = letters.map(letter => {
+//     if (alphabet.indexOf(letter.toUpperCase()) + 13 >= 26) {
+//       return alphabet[alphabet.indexOf(letter.toUpperCase()) + 13 - 26];
+//     } else {
+//       return alphabet[alphabet.indexOf(letter.toUpperCase()) + 13];
+//     }
+//   });
+//   var result = newLetters.join('');
+//   return result;
+// }
 
-console.log(myCipher('this is my cipherrrr'));
+// console.log(myCipher('this is my cipherrrr'));
