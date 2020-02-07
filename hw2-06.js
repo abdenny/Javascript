@@ -179,28 +179,28 @@
 // callNTimes(9, helloWorld);
 
 //12.
-// function sum(total, num) {
-//   return total + num;
-// }
+function sum(total, num) {
+  return total + num;
+}
 
-// function sumAnArray(arr) {
-//   return arr.reduce(sum);
-// }
+function sumAnArray(arr) {
+  return arr.reduce(sum);
+}
 
-// var numbers = [1, 2, 3, 4, 5];
-// console.log(sumAnArray(numbers));
+var numbers = [1, 2, 3, 4, 5];
+console.log(sumAnArray(numbers));
 
 //13.
-function letterToAdd(x, word) {
-  return x + word[0].toUpperCase();
-}
+// function letterToAdd(x, word) {
+//   return x + word[0].toUpperCase();
+// }
 
-function acronym(words) {
-  return words.reduce(letterToAdd, '');
-}
+// function acronym(words) {
+//   return words.reduce(letterToAdd, '');
+// }
 
-var words = ['national', 'aeronautics', 'space', 'administration'];
-console.log(acronym(words));
+// var words = ['national', 'aeronautics', 'space', 'administration'];
+// console.log(acronym(words));
 
 ////// Large Problems
 //1.
