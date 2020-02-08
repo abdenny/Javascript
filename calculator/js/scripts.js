@@ -2,61 +2,34 @@ let buttons = document.querySelector('.buttons');
 let input = document.querySelector('.input');
 let equals = document.querySelector('.equal');
 let numStorage = [];
-let NumbersToBeAdded = [];
-let NumbersToBeSubtracted = [];
-let NumbersToBeMultiplied = [];
-let NumbersToBeDivided = [];
+let calc = [0];
 
-///Functions
-// function addNums(x, y) {
-//   let equals = x + y;
-//   input.append(equals)
-// }
-// function subNums(x, y) {
-//   let equals = x - y;
-// }
-// function divideNums(x, y) {
-//   let equals = x * y;
-// }
-// function multipleNums(x, y) {
-//   let equals = x / y;
-// }
-
-function joinNumsOnOperationAddition() {
+function joinNumsOnOperation(operationType) {
   let joined = numStorage.join('');
   let joinedNum = parseInt(joined);
-  NumbersToBeAdded.push(joinedNum);
+  if (operationType == '+') {
+    let equals = joinedNum + calc[0];
+    calc.splice(0, 1, equals);
+  } else if (operationType == '-') {
+    let equals = calc[0] - joinedNum;
+    calc.splice(0, 1, equals);
+  } else if (operationType == '*') {
+    let equals = joinedNum * calc[0];
+    calc.splice(0, 1, equals);
+  } else if (operationType == '/') {
+    let equals = calc[0] / joinedNum;
+    calc.splice(0, 1, equals);
+  }
   numStorage = [];
   console.log(numStorage);
-  console.log(NumbersToBeAdded);
+  console.log(calc);
 }
 
-function joinNumsOnOperationSubtraction() {
-  let joined = numStorage.join('');
-  let joinedNum = parseInt(joined);
-  NumbersToBeSubtracted.push(joinedNum);
-  numStorage = [];
-  console.log(numStorage);
-  console.log(NumbersToBeSubtracted);
-}
-
-function joinNumsOnOperationMulti() {
-  let joined = numStorage.join('');
-  let joinedNum = parseInt(joined);
-  NumbersToBeMultiplied.push(joinedNum);
-  numStorage = [];
-  console.log(numStorage);
-  console.log(NumbersToBeMultiplied);
-}
-
-function joinNumsOnOperationDivided() {
-  let joined = numStorage.join('');
-  let joinedNum = parseInt(joined);
-  NumbersToBeDivided.push(joinedNum);
-  numStorage = [];
-  console.log(numStorage);
-  console.log(NumbersToBeDivided);
-}
+// let passIn = function makeNumStringInt() {
+//   let joined = numStorage.join('');
+//   let joinedNum = parseInt(joined);
+//   return joinedNum;
+// };
 
 /////EventListeners
 buttons.addEventListener('click', function(e) {
@@ -101,30 +74,32 @@ buttons.addEventListener('click', function(e) {
       input.append('9');
       numStorage.push(9);
       break;
-    // case 'clear':
-    //   input.replace('');
-    //   break;
+    case 'clear':
+      calc.splice(0, 1, 0);
+      input.innerHTML = '';
+      break;
     case '+':
       input.append('+');
-      joinNumsOnOperationAddition();
+      numStorage.push('+');
       break;
     case '-':
       input.append('-');
-      joinNumsOnOperationSubtraction();
+      numStorage.push('-');
       break;
     case 'divide':
       input.append('/');
-      joinNumsOnOperationDivided();
+      numStorage.push('/');
       break;
     case 'multiply':
-      input.append('x');
-      joinNumsOnOperationMulti();
+      input.append('*');
+      numStorage.push('*');
       break;
     case 'equals':
-      input.append('=');
+      //   joinNumsOnOperation('-');
+      break;
   }
 });
 
-equals.addEventListener('click', function(e) {
-  console.log('hello');
-});
+// equals.addEventListener('click', function(e) {
+//   console.log('hello');
+// });
