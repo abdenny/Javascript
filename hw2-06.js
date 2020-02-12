@@ -1,21 +1,21 @@
 /////////////HW For Feb 6.
-///1.
+// /1.
 // let arr = [45, 1, 23, -3, -4, 5];
-// let newArr = arr.filter(function(arrElement) {
-//   return arrElement =< 0;
+// let newArr = arr.filter(arrElement => {
+//   return arrElement <= 0;
 // });
 // console.log(newArr);
 
 //2.
-// let arr = [42, 1, 22, -3, -4, 6];
-// let newArr = arr.filter(function(arrElement) {
-//   if (arrElement % 2 === 0) {
-//     if (arrElement >= 0) {
-//       return arrElement;
-//     }
-//   }
-// });
-// console.log(newArr);
+let arr = [42, 1, 22, -3, -4, 6];
+let newArr = arr.filter(arrElement => {
+  if (arrElement % 2 === 0) {
+    if (arrElement >= 0) {
+      return arrElement;
+    }
+  }
+});
+console.log(newArr);
 
 //3.
 // function square(arr) {
@@ -179,16 +179,16 @@
 // callNTimes(9, helloWorld);
 
 //12.
-function sum(total, num) {
-  return total + num;
-}
+// function sum(total, num) {
+//   return total + num;
+// }
 
-function sumAnArray(arr) {
-  return arr.reduce(sum);
-}
+// function sumAnArray(arr) {
+//   return arr.reduce(sum);
+// }
 
-var numbers = [1, 2, 3, 4, 5];
-console.log(sumAnArray(numbers));
+// var numbers = [1, 2, 3, 4, 5];
+// console.log(sumAnArray(numbers));
 
 //13.
 // function letterToAdd(x, word) {

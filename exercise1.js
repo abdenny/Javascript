@@ -8,7 +8,7 @@
 
 //2. Tip calculator
 
-// function tipAmmount(billAmmount, service) {
+// let tipAmmount = (billAmmount, service) => {
 //   if (service == 'good') {
 //     let tipTotal = billAmmount * 0.2;
 //     return tipTotal;
@@ -19,7 +19,7 @@
 //     let tipTotal = billAmmount * 0.1;
 //     return tipTotal;
 //   }
-// }
+// };
 // console.log(tipAmmount(100, 'good'));
 
 // //3.
@@ -132,33 +132,33 @@
 // positiveNumbers([-4, 4, 6, -3, 1, -9]);
 
 ////////11.
-function caeserCipher(message, shift) {
-  message = message.toLowerCase();
-  var array = message.split(' ');
-  var newArray = [];
-  var alphabet = 'abcdefghijklmnopqrstuvwxyz';
+// function caeserCipher(message, shift) {
+//   message = message.toLowerCase();
+//   var array = message.split(' ');
+//   var newArray = [];
+//   var alphabet = 'abcdefghijklmnopqrstuvwxyz';
 
-  if (shift > 25) {
-    shift = shift % 26;
-  }
+//   if (shift > 25) {
+//     shift = shift % 26;
+//   }
 
-  for (var i = 0; i < array.length; i++) {
-    var word = [];
-    for (var j = 0; j < array[i].length; j++) {
-      var index = alphabet.indexOf(array[i][j]);
-      if (shift + index > 25) {
-        var letter = alphabet[index + shift - 26];
-      } else {
-        var letter = alphabet[index + shift];
-      }
-      word.push(letter);
-    }
-    newArray.push(word.join(''));
-  }
-  return newArray.join(' ');
-}
+//   for (var i = 0; i < array.length; i++) {
+//     var word = [];
+//     for (var j = 0; j < array[i].length; j++) {
+//       var index = alphabet.indexOf(array[i][j]);
+//       if (shift + index > 25) {
+//         var letter = alphabet[index + shift - 26];
+//       } else {
+//         var letter = alphabet[index + shift];
+//       }
+//       word.push(letter);
+//     }
+//     newArray.push(word.join(''));
+//   }
+//   return newArray.join(' ');
+// }
 
-console.log(caeserCipher('Is this thing working', 13));
+// console.log(caeserCipher('Is this thing working', 13));
 
 /////12.
 // function caeserDecipher(message, shift) {
