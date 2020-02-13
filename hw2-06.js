@@ -7,15 +7,15 @@
 // console.log(newArr);
 
 //2.
-let arr = [42, 1, 22, -3, -4, 6];
-let newArr = arr.filter(arrElement => {
-  if (arrElement % 2 === 0) {
-    if (arrElement >= 0) {
-      return arrElement;
-    }
-  }
-});
-console.log(newArr);
+// let arr = [42, 1, 22, -3, -4, 6];
+// let newArr = arr.filter(arrElement => {
+//   if (arrElement % 2 === 0) {
+//     if (arrElement >= 0) {
+//       return arrElement;
+//     }
+//   }
+// });
+// console.log(newArr);
 
 //3.
 // function square(arr) {

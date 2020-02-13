@@ -147,36 +147,118 @@
 
 ///////////// classes in Js
 
-class Parent {
-  parentGreeting() {
-    console.log('Im the parent');
-  }
-}
+// class Parent {
+//   parentGreeting() {
+//     console.log('Im the parent');
+//   }
+// }
 
-class Person extends Parent {
-  constructor(firstName, lastName, age) {
-    super();
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.age = age;
-    this.count = 0;
-  }
-  // creating methods inside class to act on instance variables
-  greeting = () => {
-    console.log(`Hello ${this.firstName} ${this.lastName}!`);
-    this.count++;
-  };
-  printCount = () => {
-    console.log(this.count);
-  };
-}
+// class Person extends Parent {
+//   //must call super on constructor of class inheriting attr. of parent
+//   constructor(firstName, lastName, age) {
+//     super();
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//     this.age = age;
+//     this.count = 0;
+//   }
+//   // creating methods inside class to act on instance variables
+//   greeting = () => {
+//     console.log(`Hello ${this.firstName} ${this.lastName}!`);
+//     this.count++;
+//   };
+//   printCount = () => {
+//     console.log(this.count);
+//   };
+// }
 
-let alina = new Person('alina', 'belova', 21);
+// let alina = new Person('alina', 'belova', 21);
 
-console.log(alina);
+// console.log(alina);
 
-alina.greeting();
-alina.greeting();
-alina.greeting();
-alina.printCount();
-alina.parentGreeting();
+// alina.greeting();
+// alina.greeting();
+// alina.greeting();
+// alina.printCount();
+// alina.parentGreeting();
+
+// class Character {
+//   constructor(health, power) {
+//     this.health = health;
+//     this.power = power;
+//   }
+//   attack = enemy => {
+//     enemy.health -= this.power;
+//   };
+//   print = () => {
+//     console.log(
+//       `The health of ${this.name} is ${this.health} and the power is ${this.power}.`
+//     );
+//   };
+// }
+
+// class Hero extends Character {
+//   constructor(health, power) {
+//     super(health, power);
+//     this.name = 'Hero';
+//   }
+// }
+
+// class Goblin extends Character {
+//   constructor(health, power) {
+//     super(health, power);
+//     this.name = 'Goblin';
+//   }
+// }
+// //'new' keyword to create object in JS
+// let hero = new Hero(10, 4);
+// let goblin = new Goblin(8, 5);
+
+// hero.attack(goblin);
+
+// hero.print();
+// goblin.print();
+
+////////Mine
+// class Todos {
+//   constructor(description) {
+//     this.description = description;
+//   }
+// }
+
+// class TodosManager {
+//   constructor() {
+//     this.toDoArray = [];
+//   }
+//   addToDo = descriptionFromDom => {
+//     let todo = new Todos(description);
+//     this.toDoArray.push(todo);
+//   };
+//   displayTodos = () => {
+//     ///Dom logic to display todos on the page
+//   };
+// }
+
+// let manager = new TodosManager();
+// manager.addToDo(description);
+
+/////Hers
+// class Todos {
+//   constructor(description) {
+//     this.description = description;
+//   }
+// }
+// class TodosManager {
+//   constructor() {
+//     this.todoArray = [];
+//   }
+//   addTodo = descripton => {
+//     let todo = new Todos(description);
+//     this.todoArray.push(todo);
+//   };
+//   displayTodos = () => {
+//     //DOM logic to display todos on page
+//   };
+// }
+// let manger = new TodosManager();
+// manger.addTodo(description);
