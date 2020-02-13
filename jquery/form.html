@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Forms change datatype to a post. Method by default is get. When using a get method it appends collected info to the path. POST method is more hidden
+     -->
+    <!-- <form action="/form.js" method="POST">
+      <input type="text" />
+      <input button="radio" />
+    </form> -->
+
+    <!-- <form action="" id="myform" onsubmit="myFunction()">
+      <fieldset>
+        <legend>First Name</legend>
+        <input
+          type="text"
+          name="firstName"
+          minlength="2"
+          maxlength="15"
+          required
+        />
+      </fieldset>
+      <fieldset>
+        <legend>Last Name</legend>
+        <input
+          type="text"
+          name="lastName"
+          minlength="2"
+          maxlength="15"
+          required
+        />
+      </fieldset>
+      <input type="submit" />
+    </form> -->
+    <form id="myForm">
+      Enter name:
+      <input name="brand" type="radio" value="volvo" />
+      <input name="brand" type="radio" value="saab" />
+      <input name="brand" type="radio" value="bmw" />
+      <input type="submit" value="submit" />
+    </form>
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="form.js"></script>
+  </body>
+</html>
