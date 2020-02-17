@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    Hello world
+    <ul></ul>
+    <script>
+      //   fetch('http://jsonplaceholder.typicode.com/todos')
+      //     .then(response => {
+      //       return response.json();
+      //     })
+      //     .then(jsonArr => {
+      //       console.log(jsonArr);
+      //       let newArr = jsonArr.map(todoObj => {
+      //         console.log(todoObj.title);
+      //       });
+      //       let body = document.querySelector('body');
+
+      //     });
+
+      fetch('http://jsonplaceholder.typicode.com/comments')
+        .then(response => {
+          return response.json();
+        })
+        .then(jsonArr => {
+          console.log(jsonArr);
+          let liArray = jsonArr.map(comment => {
+            return `<li>${comment.email}</li>`;
+          });
+          let ul = document.querySelector('ul');
+          ul.innerHTML = liArray.join('');
+        });
+
+      //   let myPromise = new Promise();
+    </script>
+    <script src="notes1.js"></script>
+  </body>
+</html>
